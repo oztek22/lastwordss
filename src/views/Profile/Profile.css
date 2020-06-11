@@ -1,0 +1,30 @@
+.profile-header {
+  text-align: center;
+}
+
+.profile-title {
+  font-size: 24px;
+  padding: 8px;
+}
+
+.profile-description {
+  font-size: 12px;
+  padding: 4px;
+}
+
+.profile-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px 0px 1px 0px;
+  border-style: solid;
+  border-color: #767676;
+}
+
+.subtitle-section {
+  padding: 12px;
+  width: 160px;
+  border-right: 1px solid #767676;
+  text-align: center;
+  cursor: pointer;
+}
