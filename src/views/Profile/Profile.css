@@ -28,3 +28,8 @@
   text-align: center;
   cursor: pointer;
 }
+
+.profile-feedback-list {
+  height: 426px;
+  overflow: auto;
+}

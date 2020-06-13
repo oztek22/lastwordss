@@ -1,0 +1,53 @@
+.send-header {
+  border: 1px solid #767676;
+  height: 204px;
+  margin: 30px auto;
+  width: 260px;
+}
+
+.send-header-list {
+  align-items: center;
+  border-bottom: 1px solid #767676;
+  display: flex;
+  font-family: "Courier New";
+  height: 40px;
+  justify-content: center;
+}
+
+.send-header-checkbox {
+  border-right: 1px solid #767676;
+  height: 40px;
+  text-align: center;
+  width: 60px;
+}
+
+.send-header-text {
+  padding: 12px;
+  text-align: center;
+  width: 180px;
+}
+
+.send-main {
+  width: 180px;
+  margin: 100px auto;
+}
+
+.send-main-title {
+  font: 12px fantasy;
+}
+
+.send-main-message {
+  height: 40px;
+  width: 180px;
+}
+
+.send-main-submit {
+  cursor: pointer;
+  border: 1px solid #fff;
+  width: 180px;
+  padding: 4px;
+  text-align: center;
+  padding: 12px 2px;
+  margin-top: 4px;
+  text-align: center;
+}

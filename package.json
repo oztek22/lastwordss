@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mv build lastwordss",
+    "build": "rm -r lastwordss && react-scripts build && mv build lastwordss",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
