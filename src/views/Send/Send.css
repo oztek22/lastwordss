@@ -1,53 +1,35 @@
-.send-header {
-  border: 1px solid #767676;
-  height: 204px;
-  margin: 30px auto;
-  width: 260px;
-}
-
-.send-header-list {
-  align-items: center;
-  border-bottom: 1px solid #767676;
-  display: flex;
-  font-family: "Courier New";
-  height: 40px;
-  justify-content: center;
-}
-
-.send-header-checkbox {
-  border-right: 1px solid #767676;
-  height: 40px;
-  text-align: center;
-  width: 60px;
-}
-
-.send-header-text {
-  padding: 12px;
-  text-align: center;
-  width: 180px;
-}
-
 .send-main {
-  width: 180px;
-  margin: 100px auto;
+  margin-top: 80px;
 }
 
 .send-main-title {
-  font: 12px fantasy;
+  font-family: SFProText;
+  font-size: 20px;
+  font-weight: bold;
+  color: #b8b6b6;
 }
 
 .send-main-message {
-  height: 40px;
-  width: 180px;
+  margin-top: 40px;
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #665959;
+  color: #665959;
+  width: 100%;
+}
+
+.send-main-message:focus {
+  outline: transparent;
 }
 
 .send-main-submit {
   cursor: pointer;
-  border: 1px solid #fff;
-  width: 180px;
-  padding: 4px;
-  text-align: center;
-  padding: 12px 2px;
-  margin-top: 4px;
-  text-align: center;
+  font-family: SFProText;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.63px;
+  color: #b95750;
+  margin-top: 36px;
 }
