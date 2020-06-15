@@ -9,21 +9,6 @@
   color: #b8b6b6;
 }
 
-.send-main-message {
-  margin-top: 40px;
-  font-size: 18px;
-  background: transparent;
-  border: none;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #665959;
-  color: #665959;
-  width: 100%;
-}
-
-.send-main-message:focus {
-  outline: transparent;
-}
-
 .send-main-submit {
   cursor: pointer;
   font-family: SFProText;
@@ -32,4 +17,8 @@
   letter-spacing: 0.63px;
   color: #b95750;
   margin-top: 36px;
+}
+
+.send-submit-arrow {
+  margin-left: 16px;
 }

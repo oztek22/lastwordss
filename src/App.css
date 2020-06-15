@@ -1,3 +1,22 @@
+@font-face {
+  font-family: adiNeue;
+  src: url('./fonts/adineue-bold-webfont.ttf');
+}
+
+@font-face {
+  font-family: SFProText;
+  src: url("./fonts/SF-Pro-Display-Black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFProText;
+  src: url("./fonts/SF-Pro-Display-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
 .App {
   display: flex;
   align-items: center;
@@ -9,7 +28,7 @@
 .app-children {
   height: 656px;
   width: 334px;
-  border: 1px solid #767676;
+  /* border: 1px solid #767676; */
   color: #fefefe;
   padding: 40px;
 }
@@ -28,4 +47,19 @@
 
 .title-2 {
   color: #b8b6b6;
+}
+
+input {
+  margin-top: 40px;
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #665959;
+  color: #665959;
+  width: 100%;
+}
+
+input:focus {
+  outline: transparent;
 }

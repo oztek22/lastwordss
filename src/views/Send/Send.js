@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Check from '../../components/check/check'
 import './Send.css';
+import Arrow from '../../components/arrow/arrow';
 
 function Send() {
-  const lastWords = "I'm not sure we're gonna make it alive out of(or through) 2020. What would be your last words for me?";
+  const lastWords = "If we don't make it out alive through 2020, what would be your last words for me?";
 
   const [message, setMessage] = useState('');
 
@@ -19,7 +20,7 @@ function Send() {
       <div className="send-main">
         <div className="send-main-title">{lastWords}</div>
         <input type="text" className="send-main-message" placeholder="don’t hold back, write it down"></input>
-        <div className="send-main-submit">POST ANONYMOUSLY</div>
+        <div className="send-main-submit">POST ANONYMOUSLY <span className="send-submit-arrow"><Arrow/></span></div>
       </div>
     </div>
   );

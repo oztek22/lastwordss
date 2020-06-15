@@ -1,0 +1,25 @@
+
+.arrow-line {
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  transform: rotate(90deg);
+  background-color: #b95750;
+  position: relative;
+  top: 2px;
+}
+
+.arrow {
+  border: solid #b95750;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 6px;
+  margin-left: -6px;
+  position: relative;
+  top: 1px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
