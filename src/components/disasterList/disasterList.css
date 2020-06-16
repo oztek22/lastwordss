@@ -1,0 +1,18 @@
+.disaster-list {
+  font-family: SFProText;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 16px;
+  color: #b8b6b6;
+  display: flex;
+  vertical-align: text-top;
+}
+
+.disaster-checkbox {
+  line-height: 34px;
+}
+
+.disaster-text {
+  line-height: 34px;
+  margin-left: 16px;
+}
