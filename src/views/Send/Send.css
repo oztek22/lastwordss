@@ -7,38 +7,3 @@
   margin-top: 80px;
 }
 
-.send-main-title {
-  font-family: SFProText;
-  font-size: 20px;
-  font-weight: bold;
-  color: #b8b6b6;
-}
-
-.send-main-submit {
-  cursor: pointer;
-  font-family: SFProText;
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: 0.63px;
-  color: #b95750;
-  margin-top: 36px;
-  text-transform: uppercase;
-}
-
-.send-submit-arrow {
-  margin-left: 16px;
-}
-
-.send-login {
-  color: #b95750;
-}
-
-.send-footer {
-  font-family: SFProText;
-  font-size: 18px;
-  font-weight: bold;
-  color: #665959;
-  position: absolute;
-  bottom: 0;
-  margin: 30px 0;
-}

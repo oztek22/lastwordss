@@ -14,9 +14,9 @@ ReactDOM.render(
     <App>
       <Switch>
         <Route path="/register" component={Register} />
-        <Route path="/home" component={Home} />
         <Route path="/send" component={Send} />
         <Route path="/profile" component={Profile} />
+        <Route path="/" component={Home} />
       </Switch>
     </App>
   </HashRouter>,

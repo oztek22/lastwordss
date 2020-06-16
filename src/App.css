@@ -33,22 +33,6 @@
   padding: 40px;
 }
 
-.title {
-  margin: 44px 0;
-  font-weight: bold;
-  line-height: 1.1;
-  font-size: 58px;
-  font-family: adiNeue;
-}
-
-.title-1 {
-  color: #665959;
-}
-
-.title-2 {
-  color: #b8b6b6;
-}
-
 textarea {
   margin-top: 40px;
   font-size: 18px;
@@ -64,4 +48,45 @@ textarea {
 
 textarea:focus {
   outline: transparent;
+}
+
+.paragraph {
+  font-family: SFProText;
+  font-size: 20px;
+  font-weight: bold;
+  color: #b8b6b6;
+}
+
+.footer-button {
+  color: #b95750;
+  cursor: pointer;
+}
+
+.footer {
+  font-family: SFProText;
+  font-size: 18px;
+  font-weight: bold;
+  color: #665959;
+  position: absolute;
+  bottom: 0;
+  margin: 30px 0;
+}
+
+.submit {
+  cursor: pointer;
+  font-family: SFProText;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.63px;
+  color: #b95750;
+  margin-top: 36px;
+  text-transform: uppercase;
+}
+
+.submit a {
+  color: inherit;
+}
+
+.submit-arrow {
+  margin-left: 16px;
 }
