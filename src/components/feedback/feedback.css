@@ -1,8 +1,23 @@
 .Feedback {
+  display: flex;
+  font-family: SFProText;
+  font-size: 18px;
+  font-weight: bold;
+  color: #b8b6b6;
   min-height: 24px;
-  padding: 4px;
-  border-bottom: 1px solid #767676;
-  text-align: center;
+  padding: 16px 4px;
+  border-bottom: 1px solid #665959;
   vertical-align: middle;
   line-height: 24px;
+}
+
+.feedback-message {
+  width: 74;
+  display: inline-block;
+}
+
+.feedback-name {
+  width: 26%;
+  display: inline-block;
+  text-align: right;
 }

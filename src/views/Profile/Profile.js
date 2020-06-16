@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Feedback from '../../components/feedback/feedback';
 import './Profile.css';
+import Title from '../../components/title/title';
 
 function Profile() {
 
@@ -19,7 +20,7 @@ function Profile() {
     {message: "After you die, I'll get your macbook, laptop, bike, car, house, money, wife and girlfriend.", sender: "aflatoon", receiver: "makichu", id: 12}
   ];
 
-  const [feedbacks, setFeedbacks] = useState([]);
+  const [feedbacks, setFeedbacks] = useState(dummyFeedbacks);
 
   const onButtonClick = (event) => {
     if (event.target.id === 'profile-sent-button' ) {
@@ -29,27 +30,16 @@ function Profile() {
     }
   }
 
-  useEffect(() => {
-    setFeedbacks(dummyFeedbacks);
-  }, [dummyFeedbacks]);
-
   return (
     <div className="Profile">
-      <div className="profile-header">
-        <div className="profile-title">
-          Profile
-        </div>
-        <div className="profile-description">
-          message
-        </div>
-      </div>
+      <Title title1="last" title2="wordss" />
       <div className="profile-subtitle">
         <div className="subtitle-section" id="profile-sent-button" onClick={onButtonClick}>Sent</div>
         <div className="subtitle-section" id="profile-receive-button" onClick={onButtonClick}>Received</div>
       </div>
       <div className="profile-feedback-list">
         {feedbacks.map((feedback) => {
-          return <Feedback key={feedback.id} message={feedback.message} />
+          return <Feedback key={feedback.id} message={feedback.message} name={feedback.receiver} />
         })}
       </div>
     </div>
