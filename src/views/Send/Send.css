@@ -1,3 +1,8 @@
+.Send {
+  height: 100%;
+  position: relative;
+}
+
 .send-main {
   margin-top: 80px;
 }
@@ -21,4 +26,18 @@
 
 .send-submit-arrow {
   margin-left: 16px;
+}
+
+.send-login {
+  color: #b95750;
+}
+
+.send-footer {
+  font-family: SFProText;
+  font-size: 18px;
+  font-weight: bold;
+  color: #665959;
+  position: absolute;
+  bottom: 0;
+  margin: 30px 0;
 }
