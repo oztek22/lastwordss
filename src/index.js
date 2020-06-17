@@ -8,12 +8,16 @@ import Send from './views/Send/Send';
 import Home from './views/Home/Home';
 import Profile from './views/Profile/Profile';
 import * as serviceWorker from './serviceWorker';
+import Login from './views/Login/login';
+import Share from './views/share/share';
 
 ReactDOM.render(
   <HashRouter>
     <App>
       <Switch>
         <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
+        <Route path="/share" component={Share} />
         <Route path="/send" component={Send} />
         <Route path="/profile" component={Profile} />
         <Route path="/" component={Home} />

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Feedback from '../../components/feedback/feedback';
 import './Profile.css';
 import Title from '../../components/title/title';
+import { Link } from 'react-router-dom';
 
 function Profile() {
 
@@ -44,6 +45,9 @@ function Profile() {
         {feedbacks.map((feedback) => {
           return <Feedback key={feedback.id} message={feedback.message} name={feedback.receiver} />
         })}
+      </div>
+      <div className="footer">
+       <Link to="/share" className="footer-button">Click here</Link> to share link
       </div>
     </div>
   );

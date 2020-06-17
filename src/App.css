@@ -33,7 +33,7 @@
   padding: 40px;
 }
 
-textarea {
+textarea, input {
   margin-top: 40px;
   font-size: 18px;
   background: transparent;
@@ -42,11 +42,14 @@ textarea {
   border-bottom: 1px solid #665959;
   color: #665959;
   width: 100%;
+}
+
+textarea {
   resize: none;
   height: 18px;
 }
 
-textarea:focus {
+textarea:focus, input:focus {
   outline: transparent;
 }
 
