@@ -21,12 +21,15 @@ function Profile() {
   ];
 
   const [feedbacks, setFeedbacks] = useState(dummyFeedbacks);
+  const [activeTab, setActiveTab] = useState('sent');
 
   const onButtonClick = (event) => {
     if (event.target.id === 'profile-sent-button' ) {
       setFeedbacks(dummyFeedbacks);
+      setActiveTab('sent');
     } else {
       setFeedbacks(dummyFeedbacks.reverse());
+      setActiveTab('receive');
     }
   }
 
@@ -34,8 +37,8 @@ function Profile() {
     <div className="Profile">
       <Title title1="last" title2="wordss" />
       <div className="profile-subtitle">
-        <div className="subtitle-section" id="profile-sent-button" onClick={onButtonClick}>Sent</div>
-        <div className="subtitle-section" id="profile-receive-button" onClick={onButtonClick}>Received</div>
+        <div className={'subtitle-section' + (activeTab === 'sent' ? ' active' : '')} id="profile-sent-button" onClick={onButtonClick}>Sent</div>
+        <div className={'subtitle-section' + (activeTab === 'receive' ? ' active' : '')} id="profile-receive-button" onClick={onButtonClick}>Received</div>
       </div>
       <div className="profile-feedback-list">
         {feedbacks.map((feedback) => {

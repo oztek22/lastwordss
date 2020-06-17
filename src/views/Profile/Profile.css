@@ -14,22 +14,34 @@
 
 .profile-subtitle {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-width: 1px 0px 1px 0px;
-  border-style: solid;
-  border-color: #767676;
 }
 
 .subtitle-section {
-  padding: 12px;
-  width: 160px;
-  border-right: 1px solid #767676;
-  text-align: center;
+  padding: 12px 0;
+  margin-right: 72px;
   cursor: pointer;
+  position: relative;
+  transition: 0.2s all;
+  color: #665959;
+}
+
+.subtitle-section:hover, .subtitle-section.active {
+  color: #b8b6b6;
+}
+
+.subtitle-section.active::after, .subtitle-section:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #b8b6b6;
+  height: 2px;
+  width: 24px;
+  left: 0;
+  bottom: 0;
+  border-radius: 100px;
 }
 
 .profile-feedback-list {
-  height: 360px;
+  margin-top: 40px;
+  height: 280px;
   overflow: auto;
 }
