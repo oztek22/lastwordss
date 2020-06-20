@@ -88,6 +88,7 @@ textarea:focus, input:focus {
 
 .submit a {
   color: inherit;
+  text-decoration: none;
 }
 
 .submit-arrow {
