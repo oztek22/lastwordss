@@ -12,7 +12,7 @@ function Login() {
   const history = useHistory();
 
   const onSubmit = () => {
-    Axios.post('http://52.66.205.103/sayit/User', {
+    Axios.post('https://52.66.205.103/sayit/User', {
       email: username,
       password: sha256(password)
     })

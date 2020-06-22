@@ -14,7 +14,7 @@ function Register() {
   const [password, setPassword] = useState('');
 
   const onSubmit = () => {
-      Axios.post('http://52.66.205.103/sayit/User/registration', {
+      Axios.post('https://52.66.205.103/sayit/User/registration', {
         name: username,
         password: sha256(password),
         email,
@@ -35,8 +35,10 @@ function Register() {
   const handleUserData = (e) => {
     if (emailRegex.test(e.target.value.toLowerCase())) {
       setEmail(e.target.value);
+      setPhone(null);
     } else {
-      setPhone(e.target.value)
+      setPhone(e.target.value);
+      setEmail(null);
     }
   }
 
