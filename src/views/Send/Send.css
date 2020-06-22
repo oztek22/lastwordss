@@ -3,7 +3,19 @@
   position: relative;
 }
 
-.send-main {
-  margin-top: 80px;
+.Send .title {
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
+.send-main {
+  margin-top: 12px;
+}
+
+.Send.one .footer {
+  position: unset;
+}
+
+.Send .submit {
+  margin-top: 12px;
+}

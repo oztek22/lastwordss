@@ -46,7 +46,7 @@ textarea, input {
 
 textarea {
   resize: none;
-  height: 18px;
+  height: 36px;
 }
 
 textarea:focus, input:focus {

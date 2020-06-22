@@ -33,7 +33,6 @@ function Send(props) {
         setView(2);
         break;
       case 2:
-        setView(3);
         break;
       default:
         break;
@@ -41,18 +40,20 @@ function Send(props) {
   };
 
   return (
-    <div className="Send">
+    <div className={'Send' + (view === 1 ? ' one' : '')}>
       <Title title1="last" title2="wordss" />
       { view === 1 ?  <DisasterList /> : null}
       <div className="send-main">
-        <div className="paragraph">{lastWords}</div>
-        { view === 2 ?
-          <textarea className="send-main-message" placeholder="don’t hold back, write it down"></textarea>
+        { view === 1 ?
+          <>
+            <div className="paragraph">{lastWords}</div>
+            <textarea className="send-main-message" placeholder="don’t hold back, write it down"></textarea>
+            <div className="submit" onClick={onSubmit}> {submitLabel} <span className="submit-arrow"><Arrow/></span></div>
+          </>
           : null
         }
-        <div className="submit" onClick={onSubmit}> {submitLabel} <span className="submit-arrow"><Arrow/></span></div>
       </div>
-      { view === 2 && !props.user?
+      { !props.user?
         <div className="footer">
           <Link to="/login" className="footer-button">Login </Link> to save your responses
         </div>

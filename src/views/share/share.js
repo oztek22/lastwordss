@@ -29,7 +29,7 @@ function Share() {
 
   return (
     <div className="Share">
-      <Title title1="share" title2="link" />
+      <Title title1="Share" title2="link" />
       <div className="share-message paragraph"> There you go! So easy. Now share this with your friends and see what they have to say…. </div>
       <input type="text" placeholder="https://lastwordss.now.sh/subh223" readOnly/>
       <div className="submit" onClick={onSubmit}> {copyLabel} <span className="submit-arrow"><Arrow /></span></div>
