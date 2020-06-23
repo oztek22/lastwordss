@@ -14,16 +14,17 @@ function Register() {
   const [password, setPassword] = useState('');
 
   const onSubmit = () => {
-      Axios.post('https://52.66.205.103/sayit/User/registration', {
-        name: username,
-        password: sha256(password),
-        email,
-        phone
-      })
+    Axios.post('https://lastwordss.com/api/User/registration', {
+      name: username,
+      password: sha256(password),
+      email,
+      phone
+    })
       .then(function (response) {
         console.log(response);
         if (response.code === 200) {
           localStorage.setItem('dy', response.data);
+          localStorage.setItem('jd', username);
           history.push('/share')
         }
       })
@@ -43,20 +44,24 @@ function Register() {
   }
 
   return (
-    <div className="Register">
-      <Title title1="last" title2="signup" />
-      <div className="register-form">
-        <input type="text" placeholder="email / number" onChange={handleUserData} />
-        <input type="text" placeholder="User id" onChange={(e) => setUsername(e.target.value)} />
-        <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
 
-        <div className="submit" onClick={onSubmit}> Unlock the mystery <span className="submit-arrow"><Arrow /></span></div>
+    <div className="footer-setter">
+      <div className="Register">
+        <Title title1="last" title2="signup" />
+        <div className="register-form">
+          <input type="text" placeholder="email / number" onChange={handleUserData} />
+          <input type="text" placeholder="User id" onChange={(e) => setUsername(e.target.value)} />
+          <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+
+          <div className="submit" onClick={onSubmit}> Unlock the mystery <span className="submit-arrow"><Arrow /></span></div>
+        </div>
       </div>
 
       <div className="footer">
         Not dead yet? <Link to="/login" className="footer-button">Login </Link>
       </div>
     </div>
+
   );
 }
 

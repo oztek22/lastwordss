@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1c1818;
 }
 
@@ -30,7 +30,7 @@
   width: 334px;
   /* border: 1px solid #767676; */
   color: #fefefe;
-  padding: 40px;
+  padding-bottom: 40px;
 }
 
 textarea, input {
@@ -60,6 +60,14 @@ textarea:focus, input:focus {
   color: #b8b6b6;
 }
 
+
+.footer-setter {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: inherit;
+}
+
 .footer-button {
   color: #b95750;
   cursor: pointer;
@@ -70,9 +78,8 @@ textarea:focus, input:focus {
   font-size: 18px;
   font-weight: bold;
   color: #665959;
-  position: absolute;
-  bottom: 0;
-  margin: 30px 0;
+  flex: 0 0 50px;
+  margin-top: 24px;
 }
 
 .submit {

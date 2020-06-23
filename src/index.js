@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Register from './views/Register/Register';
@@ -12,18 +12,18 @@ import Login from './views/Login/login';
 import Share from './views/share/share';
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter>
     <App>
       <Switch>
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/share" component={Share} />
-        <Route path="/send" component={Send} />
+        <Route path="/send/:userId" component={Send} />
         <Route path="/profile" component={Profile} />
         <Route path="/" component={Home} />
       </Switch>
     </App>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

@@ -12,10 +12,17 @@
   margin-top: 12px;
 }
 
-.Send.one .footer {
-  position: unset;
-}
-
 .Send .submit {
   margin-top: 12px;
+}
+
+.thankyou {
+  font-family: SFProText;
+  font-size: 20px;
+  font-weight: bold;
+  color: #665959;
+}
+
+.thankyou span {
+  color: #b8b6b6;
 }
