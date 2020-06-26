@@ -7,48 +7,34 @@ import Axios from 'axios';
 
 function Profile() {
 
-  const dummyFeedbacks = [
-    { message: "After you die, I'll get your macbook.", sender: "aflatoon", receiver: "makichu", id: 1 },
-    { message: "After you die, I'll get your laptop.", sender: "aflatoon", receiver: "makichu", id: 2 },
-    { message: "After you die, I'll get your bike.", sender: "aflatoon", receiver: "makichu", id: 3 },
-    { message: "After you die, I'll get your car.", sender: "aflatoon", receiver: "makichu", id: 4 },
-    { message: "After you die, I'll get your house.", sender: "aflatoon", receiver: "makichu", id: 5 },
-    { message: "After you die, I'll get your money.", sender: "aflatoon", receiver: "makichu", id: 6 },
-    { message: "After you die, I'll get your wife.", sender: "aflatoon", receiver: "makichu", id: 7 },
-    { message: "After you die, I'll get your girlfriend.", sender: "aflatoon", receiver: "makichu", id: 8 },
-    { message: "After you die, I'll get your macbook.", sender: "aflatoon", receiver: "makichu", id: 9 },
-    { message: "After you die, I'll get your macbook.", sender: "aflatoon", receiver: "makichu", id: 10 },
-    { message: "After you die, I'll get your macbook.", sender: "aflatoon", receiver: "makichu", id: 11 },
-    { message: "After you die, I'll get your macbook, laptop, bike, car, house, money, wife and girlfriend.", sender: "aflatoon", receiver: "makichu", id: 12 }
-  ];
-
-  const [feedbacks, setFeedbacks] = useState(dummyFeedbacks);
+  const [feedbacks, setFeedbacks] = useState([]);
   const [activeTab, setActiveTab] = useState('sent');
 
   const onButtonClick = (event) => {
-    fetchData();
+    setFeedbacks([]);
     if (event.target.id === 'profile-sent-button') {
-      setFeedbacks(dummyFeedbacks);
       setActiveTab('sent');
+      fetchData('sender');
     } else {
-      setFeedbacks(dummyFeedbacks.reverse());
       setActiveTab('receive');
+      fetchData('receiver');
     }
   }
 
-  const fetchData = () => {
+  const fetchData = (type) => {
 
     const headers = {
       'TOKEN': localStorage.getItem('dy') || ''
     }
 
-    Axios.post('https://lastwordss.com/api/User/getMessage', {
+    Axios.post(`https://lastwordss.com/api/User/getMessage?type=${type}&user=${localStorage.getItem('jd') || ''}`, {
     }, {
       headers
     })
       .then(function (response) {
         console.log(response);
         if (response.data && response.data.code === 200) {
+          setFeedbacks(response.data.data);
         }
       })
       .catch(function (error) {
@@ -66,8 +52,11 @@ function Profile() {
         </div>
         <div className="profile-feedback-list">
           {feedbacks.map((feedback) => {
-            return <Feedback key={feedback.id} message={feedback.message} name={feedback.receiver} />
+            return <Feedback key={feedback.id} message={feedback.post} name={feedback.receiver} />
           })}
+          {!feedbacks || !feedbacks.length ? 
+          <div>It seems no one things you will die....</div>
+          : null}
         </div>
       </div>
       <div className="footer">
