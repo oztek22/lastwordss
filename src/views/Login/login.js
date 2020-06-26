@@ -18,8 +18,8 @@ function Login() {
     })
       .then(function (response) {
         console.log(response);
-        if (response.code === 200) {
-          localStorage.setItem('dy', response.data);
+        if (response.data && response.data.code === 200) {
+          localStorage.setItem('dy', response.data.data);
           localStorage.setItem('jd', username);
           history.push('/profile')
         }

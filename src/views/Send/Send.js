@@ -9,7 +9,7 @@ import Axios from 'axios';
 function Send(props) {
   const lastWords = "If we don't make it out alive through 2020, what would be your last words for me?";
   const submitLabel = "Post anonymously";
-  const [view, setView] = useState(1);
+  const [view, setView] = useState(2);
   const [post, setPost] = useState('');
   const receiverId = props.match.params.userId;
 
@@ -26,7 +26,7 @@ function Send(props) {
     })
       .then(function (response) {
         console.log(response);
-        if (response.code === 200) {
+        if (response.data && response.data.code === 200) {
           setView(2);
         }
       })

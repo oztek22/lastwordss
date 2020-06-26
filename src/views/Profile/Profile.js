@@ -48,7 +48,7 @@ function Profile() {
     })
       .then(function (response) {
         console.log(response);
-        if (response.code === 200) {
+        if (response.data && response.data.code === 200) {
         }
       })
       .catch(function (error) {
