@@ -9,7 +9,7 @@ import Axios from 'axios';
 function Send(props) {
   const lastWords = "If we don't make it out alive through 2020, what would be your last words for me?";
   const submitLabel = "Post anonymously";
-  const [view, setView] = useState(2);
+  const [view, setView] = useState(1);
   const [post, setPost] = useState('');
   const receiverId = props.match.params.userId;
 
@@ -19,7 +19,8 @@ function Send(props) {
     }
 
     Axios.post('https://lastwordss.com/api/User/sendMessage', {
-      to: receiverId,
+      receiver: receiverId,
+      sender: localStorage.getItem('jd') || null,
       post: post
     }, {
       headers

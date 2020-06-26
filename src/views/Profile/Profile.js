@@ -42,7 +42,7 @@ function Profile() {
       'TOKEN': localStorage.getItem('dy') || ''
     }
 
-    Axios.post('https://lastwordss.com/api/User/myMessage', {
+    Axios.post('https://lastwordss.com/api/User/getMessage', {
     }, {
       headers
     })
