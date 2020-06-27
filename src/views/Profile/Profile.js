@@ -10,6 +10,10 @@ function Profile() {
   const [feedbacks, setFeedbacks] = useState([]);
   const [activeTab, setActiveTab] = useState('sent');
 
+  useEffect(() => {
+    fetchData('sender');
+  }, []);
+
   const onButtonClick = (event) => {
     setFeedbacks([]);
     if (event.target.id === 'profile-sent-button') {
@@ -27,7 +31,7 @@ function Profile() {
       'TOKEN': localStorage.getItem('dy') || ''
     }
 
-    Axios.post(`https://lastwordss.com/api/User/getMessage?type=${type}&user=${localStorage.getItem('jd') || ''}`, {
+    Axios.post(`https://lastwordss.com/api/User/getMessages?type=${type}&user=${localStorage.getItem('jd') || ''}`, {
     }, {
       headers
     })
@@ -35,6 +39,8 @@ function Profile() {
         console.log(response);
         if (response.data && response.data.code === 200) {
           setFeedbacks(response.data.data);
+        } else if (response.data && response.data.code === 400) {
+          console.error(response.data.data);
         }
       })
       .catch(function (error) {
@@ -52,7 +58,7 @@ function Profile() {
         </div>
         <div className="profile-feedback-list">
           {feedbacks.map((feedback) => {
-            return <Feedback key={feedback.id} message={feedback.post} name={feedback.receiver} />
+            return <Feedback key={feedback.id} message={feedback.post} name={activeTab === 'sent' ? feedback.receiver : ''} />
           })}
           {!feedbacks || !feedbacks.length ? 
           <div>It seems no one things you will die....</div>
