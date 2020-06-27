@@ -58,7 +58,7 @@ function Send(props) {
           {view === 1 ?
             <>
               <div className="paragraph">{lastWords}</div>
-              <textarea className="send-main-message" placeholder="don’t hold back, write it down" onChange={(e) => setPost(e.target.value)}></textarea>
+              <textarea className="send-main-message" placeholder="Don’t hold back, write it down" onChange={(e) => setPost(e.target.value)}></textarea>
               <div className="submit" onClick={onSubmit}> {submitLabel} <span className="submit-arrow"><Arrow /></span></div>
               <ErrorMessage error={error} />
             </>

@@ -1,0 +1,19 @@
+.page-border {
+    fill: #fff;
+}
+
+.fill-copy {
+    fill: #0045a5;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.fill-copy:hover, .fill-copy.copied {
+    fill: #17855e;
+}
+
+.copied-text {
+    position: absolute;
+    color: #17855e;
+    margin-top: 4px;
+}
