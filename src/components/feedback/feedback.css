@@ -1,5 +1,6 @@
 .Feedback {
   display: flex;
+  justify-content: space-between;
   font-family: SFProText;
   font-size: 18px;
   font-weight: bold;

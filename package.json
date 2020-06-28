@@ -21,7 +21,7 @@
     "build": "rm -r lastwordss && react-scripts build && mv build lastwordss",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "zip": "zip -r lastwordss.zip lastwordss"
+    "zip": "rm -r lastwordss.zip && zip -r lastwordss.zip lastwordss"
   },
   "eslintConfig": {
     "extends": "react-app"

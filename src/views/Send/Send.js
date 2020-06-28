@@ -9,7 +9,7 @@ import shortid from 'shortid';
 import ErrorMessage from '../../components/error/error';
 
 function Send(props) {
-  const lastWords = "If we don't make it out alive through 2020, what would be your last words for me?";
+  const lastWords = `If we don't make it out alive through 2020, what would be your last words for ${props.match.params.userId}?`;
   const submitLabel = "Post anonymously";
   const [view, setView] = useState(1);
   const [post, setPost] = useState('');
@@ -40,7 +40,7 @@ function Send(props) {
         if (response.data && response.data.code === 200) {
           setView(2);
         } else if (response.data && response.data.code === 400) {
-          setError(response.data.data);
+          setError(response.data.message);
         }
       })
       .catch(function (error) {
@@ -73,7 +73,10 @@ function Send(props) {
         <div className="footer">
           <Link to="/login" className="footer-button">Login </Link> to save your responses
         </div>
-        : null
+        : 
+        <div className="footer">
+          Go to <Link to="/home" className="footer-button">Home </Link>!
+        </div>
       }
     </div>
   );

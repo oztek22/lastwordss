@@ -28,7 +28,7 @@ function Register() {
           localStorage.setItem('jd', username);
           history.push('/share');
         } else if (response.data && response.data.code === 400) {
-          setError(response.data.data);
+          setError(response.data.message);
         }
       })
       .catch(function (error) {

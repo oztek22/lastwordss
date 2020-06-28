@@ -40,7 +40,7 @@ function Profile() {
         if (response.data && response.data.code === 200) {
           setFeedbacks(response.data.data);
         } else if (response.data && response.data.code === 400) {
-          console.error(response.data.data);
+          console.error(response.data.message);
         }
       })
       .catch(function (error) {

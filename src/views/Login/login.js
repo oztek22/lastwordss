@@ -26,7 +26,7 @@ function Login() {
           localStorage.setItem('jd', username);
           history.push('/profile');
         } else if (response.data && response.data.code === 400) {
-          setError(response.data.data);
+          setError(response.data.message);
         }
       })
       .catch(function (error) {
